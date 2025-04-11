@@ -1,0 +1,39 @@
+body{
+    margin-top: 10px;
+    text-align: center;
+
+}
+h1{font-size: 30px;}
+
+
+button{
+width: 100px;
+height: 100px;
+background-color: white;
+    outline: 0;
+    font-size: 5rem;
+    border: none;
+    box-shadow: 1px 2px 8px rgb(205, 205, 205);
+
+}
+button:hover{cursor: pointer;}
+button:active{
+    box-shadow: 0 0 2px 0 rgb(205, 205, 205);
+    transform: scale();
+}
+
+#resetbtn{font-size: 2rem;}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pc{height: 130px; width: 130px; border: 2px solid rgb(152, 152, 152);
+margin-bottom: 1rem;
+justify-self: center;}
+
+.user{height: 130px; width: 130px;border: 2px solid rgb(152, 152, 152); justify-self: center; margin-bottom: 1rem;}
+
+#resetbtn{height: fit-content;}
