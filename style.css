@@ -3,24 +3,28 @@ body{
     text-align: center;
 
 }
-h1{font-size: 30px;}
+h1{font-size: 30px;
+margin-bottom: 2rem;}
 
 
 button{
-width: 100px;
-height: 100px;
+width: fit-content;
+height: fit-content;
 background-color: white;
     outline: 0;
     font-size: 5rem;
     border: none;
     box-shadow: 1px 2px 8px rgb(205, 205, 205);
+    text-align: center;
 
 }
 button:hover{cursor: pointer;}
-button:active{
-    box-shadow: 0 0 2px 0 rgb(205, 205, 205);
-    transform: scale();
-}
+
+
+.select{scale: (1.5);
+    transform: scale(1.5);
+    transition: transform 0.2s ease;
+flex-grow: ;}
 
 #resetbtn{font-size: 2rem;}
 
@@ -28,12 +32,26 @@ button:active{
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 7rem;
 }
+.pcoptions{
+    font-size: 8rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    margin: 5rem 0 1rem;
+}
+.pcoption{
+position: absolute;
+;}
 
-.pc{height: 130px; width: 130px; border: 2px solid rgb(152, 152, 152);
-margin-bottom: 1rem;
-justify-self: center;}
-
-.user{height: 130px; width: 130px;border: 2px solid rgb(152, 152, 152); justify-self: center; margin-bottom: 1rem;}
+#resetbtn:active{box-shadow: 0 0 0 ;
+transform: scale(1.2)}
 
 #resetbtn{height: fit-content;}
+
+#scoretracker{display: flex;justify-content: space-around;
+font-size: 2rem;}
