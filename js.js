@@ -5,9 +5,12 @@ var choiceEls = document.querySelectorAll(".choice");
 var pcOptions = document.querySelectorAll(".pcoption");
 var resetbtnEl= document.getElementById("resetbtn");
 var nameEl = document.getElementById("name");
+var roundEl = document.getElementById("roundnum");
 
 var userScore = 0;
 var pcScore = 0;
+let round = "0";
+roundEl.textContent=round
 
 var userName = prompt("What's your name?");
 if(userName){
@@ -66,7 +69,16 @@ else if (options[randomIndex]==="scissors"){document.getElementById("pcscissors"
 
 var result=compareChoices(pcChoice,userChoice);
 updateScore();
- alert(result);}
+ alert(result);
+
+round++;
+roundEl.textContent=round;
+if (pcScore===5) {alert("You lost :("); choiceEls.forEach(btn=>btn.disabled=true)} else if (userScore===5){alert("You won! ^^");
+
+choiceEls.forEach(btn=>btn.disabled=true);};
+
+}
+
 
 
 
@@ -78,8 +90,11 @@ choiceEls.forEach(function(button){
 var reset=function(){
     pcScore=0;
     userScore=0;
+    round=0;
     updateScore();
     resetbtnEl.style.boxShadow="0"
+    roundEl.textContent=round;
+    choiceEls.forEach(btn=>btn.disabled=false);
 }
 
 resetbtnEl.addEventListener("click",reset)
